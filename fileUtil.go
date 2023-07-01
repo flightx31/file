@@ -83,3 +83,8 @@ func CopyDirectoryContents(source, destination string) error {
 	})
 	return err
 }
+
+func FileExists(path string) bool {
+	_, err := fs.Stat(path)
+	return !os.IsNotExist(err)
+}
