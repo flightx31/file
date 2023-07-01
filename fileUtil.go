@@ -84,6 +84,7 @@ func CopyDirectoryContents(source, destination string) error {
 	return err
 }
 
+// FileExists is a tiny function that checks if a file exists or not
 func FileExists(path string) bool {
 	_, err := fs.Stat(path)
 	return !os.IsNotExist(err)
